@@ -1,0 +1,74 @@
+.footer {
+  position: relative;
+  padding: 100px 130px;
+  box-sizing: border-box;
+  overflow: hidden;
+  .footer-wrap {
+    text-align: center;
+    width: 100%; height: 100%;
+  }
+  .video-area {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+    width: 100%; height: 100%;
+    video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+  }
+  .title-area {
+    a {
+      display: inline-block;
+      font-size: 15vw;
+      span {
+        display: inline-block;
+      }
+    } 
+  }
+  .social-area {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    a {
+      display: block;
+      padding: 10px;
+      font-size: 30px;
+      overflow: hidden;
+      &::after {
+        content: '';
+        display: block;
+        width: 0; height: 1px;
+        background: #fff;
+        transition: width 1s ease-in;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      span {
+        display: block;
+      }
+    }
+    .link-github {}
+    .link-velog {}
+  }
+  .copy {
+    margin-top: 100px;
+  }
+  @include mobile {
+    padding: 30px 60px;
+    .title-area {
+      a { font-size: 18vw; }
+    }
+    .social-area {
+      gap: 15px;
+      margin-top: 15px;
+      a { font-size: 22px; }
+    }
+    .copy { margin-top: 25px; font-size: 12px; }
+  }
+}

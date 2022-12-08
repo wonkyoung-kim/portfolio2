@@ -1,0 +1,16 @@
+.blind {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+body {
+  font-family: 'headline-gothic-atf', sans-serif;
+  background: #000;
+  color: #fff;
+  &.hidden {
+    overflow: hidden;
+  }
+}
