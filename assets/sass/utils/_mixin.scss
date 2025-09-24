@@ -1,3 +1,5 @@
+@use '../utils/var' as *;
+
 @mixin ellipsis($line) {
   display: -webkit-box;
   -webkit-box-orient: vertical;

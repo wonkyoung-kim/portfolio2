@@ -1,11 +1,11 @@
-@import './utills/var';
-@import './utills/mixin';
+@use './utils/var';
+@use './utils/mixin';
 
-@import './base/reset';
-@import './base/typo';
-@import './base/common';
+@use './base/reset';
+@use './base/typo';
+@use './base/common';
 
-@import './layout/header';
-@import './layout/footer';
+@use './layout/header';
+@use './layout/footer';
 
-@import './pages/main';
+@use './pages/main';

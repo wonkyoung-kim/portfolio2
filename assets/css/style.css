@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,51 +77,6 @@ input, button, select {
   font-weight: 700;
 }
 @font-face {
-  font-family: "kiona";
-  src: url(/assets/font/Kiona-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "LemonMilk";
-  src: url(/assets/font/LEMONMILK-Light.otf);
-  font-weight: 100;
-}
-@font-face {
-  font-family: "LemonMilk";
-  src: url(/assets/font/LEMONMILK-Regular.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "LemonMilk";
-  src: url(/assets/font/LEMONMILK-Bold.otf);
-  font-weight: 700;
-}
-@font-face {
-  font-family: "CaviarDreams";
-  src: url(/assets/font/CaviarDreams.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "LaGaglianePersonalUse";
-  src: url(/assets/font/LaGaglianePersonalUse-4BdBx.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "StretchPro";
-  src: url(/assets/font/StretchPro.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "oktaneue";
-  src: url(/assets/font/oktaneue-ultralight.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "oktaneue";
-  src: url(/assets/font/oktaneue-blackitalic.otf);
-  font-weight: 700;
-}
-@font-face {
   font-family: "video";
   src: url(/assets/font/Video.woff);
   font-weight: 400;
@@ -141,6 +94,7 @@ body {
   font-family: "headline-gothic-atf", sans-serif;
   background: #000;
   color: #fff;
+  overflow-x: hidden;
 }
 body.hidden {
   overflow: hidden;
@@ -197,19 +151,19 @@ body.hidden {
   display: block;
 }
 @media (max-width: 767px) {
-  .header h1 {
+  .header .header h1 {
     left: 20px;
     top: 20px;
   }
-  .header .gnb-item.works {
+  .header .header .gnb-item.works {
     right: 20px;
     top: 20px;
   }
-  .header .gnb-item.about {
+  .header .header .gnb-item.about {
     left: 20px;
     bottom: 20px;
   }
-  .header .gnb-item.contact {
+  .header .header .gnb-item.contact {
     right: 20px;
     bottom: 20px;
   }
@@ -397,6 +351,9 @@ body.hidden {
   flex-direction: column;
   gap: 70px;
 }
+.sc-works .work-item {
+  max-width: 600px;
+}
 .sc-works .work-item:nth-child(2n) {
   align-self: flex-end;
 }
@@ -405,7 +362,6 @@ body.hidden {
      object-position: right;
 }
 .sc-works .work-item .img-box {
-  width: 650px;
   height: 650px;
   overflow: hidden;
 }
@@ -420,25 +376,31 @@ body.hidden {
   margin-top: 30px;
 }
 .sc-works .work-item .txt-box .title {
-  font-size: 80px;
+  line-height: 1.2;
+  font-size: 50px;
   font-weight: bold;
   letter-spacing: 2px;
+  word-break: keep-all;
   overflow: hidden;
 }
 .sc-works .work-item .txt-box .title span {
   display: block;
 }
-.sc-works .work-item .txt-box .desc {
+.sc-works .work-item .txt-box .info-list {
   font-family: "Pretendard", sans-serif;
-  font-size: 18px;
   margin-top: 20px;
-  width: 420px;
+}
+.sc-works .work-item .txt-box .info-list li {
   word-break: keep-all;
   line-height: 1.4;
+  font-size: 16px;
   overflow: hidden;
 }
-.sc-works .work-item .txt-box .desc span {
+.sc-works .work-item .txt-box .info-list li span {
   display: block;
+}
+.sc-works .work-item .txt-box .info-list li span strong {
+  font-weight: bold;
 }
 .sc-works .work-item .txt-box .keywords {
   margin-top: 10px;
@@ -538,8 +500,7 @@ body.hidden {
 }
 .sc-about .word-item:hover .img-box {
   opacity: 1;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .sc-about .word-item:hover .img-box img {
   transform: scale(1);
@@ -570,8 +531,7 @@ body.hidden {
   width: 320px;
   overflow: hidden;
   opacity: 0;
-  -webkit-clip-path: polygon(0 0, 12% 0, 39% 100%, 0% 100%);
-          clip-path: polygon(0 0, 12% 0, 39% 100%, 0% 100%);
+  clip-path: polygon(0 0, 12% 0, 39% 100%, 0% 100%);
   transition: 1s;
 }
 .sc-about .word-item .img-box img {

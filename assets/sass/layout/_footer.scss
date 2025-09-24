@@ -1,3 +1,5 @@
+@use '../utils/mixin' as *;
+
 .footer {
   position: relative;
   padding: 100px 130px;
@@ -53,8 +55,6 @@
         display: block;
       }
     }
-    .link-github {}
-    .link-velog {}
   }
   .copy {
     margin-top: 100px;

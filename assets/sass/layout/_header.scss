@@ -1,0 +1,72 @@
+@use '../utils/mixin' as *;
+
+.header {
+    h1 {
+        position: fixed;
+        left: 40px;
+        top: 40px;
+        z-index: 50;
+        padding: 10px;
+        overflow: hidden;
+        font-family: "video", sans-serif;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: opacity 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .logo {
+        display: block;
+    }
+    .gnb-item {
+        overflow: hidden;
+        padding: 10px;
+        font-family: "video", sans-serif;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: opacity 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+        &.works {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+            z-index: 50;
+        }
+        &.about {
+            position: fixed;
+            left: 40px;
+            bottom: 40px;
+            z-index: 50;
+        }
+        &.contact {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            z-index: 50;
+        }
+        a {
+            display: block;
+        }
+    }
+    @media (max-width: 767px) {
+        .header h1 {
+            left: 20px;
+            top: 20px;
+        }
+        .header .gnb-item.works {
+            right: 20px;
+            top: 20px;
+        }
+        .header .gnb-item.about {
+            left: 20px;
+            bottom: 20px;
+        }
+        .header .gnb-item.contact {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}

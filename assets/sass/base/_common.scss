@@ -10,6 +10,7 @@ body {
   font-family: 'headline-gothic-atf', sans-serif;
   background: #000;
   color: #fff;
+  overflow-x: hidden;
   &.hidden {
     overflow: hidden;
   }
